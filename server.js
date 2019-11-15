@@ -2,9 +2,10 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const MongoClient = require('mongodb').MongoClient
+require('dotenv').config()
 
 let db_auth = `mongodb://localhost:27017/test_analytics`;
-console.log('process.env.MONGO_USER//////', process.env.MONGO_USER);
+console.log('process.env.MONGO_USER22222//////', process.env.MONGO_USER);
 if (process.env.MONGO_USER) {
   db_auth = `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PWD}@ds247670.mlab.com:47670/test_analytics`;
 }
